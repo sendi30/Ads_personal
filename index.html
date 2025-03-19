@@ -257,7 +257,38 @@
                 alert("Please enter both your name and number.");
             }
         }
+import React from 'react'
+import createAdHandler from 'monetag-tg-sdk'
 
+const adHandler = createAdHandler(
+    // Rewarded Popup
+
+show_8943857('pop').then(() => {
+    // user watch ad till the end or close it in interstitial format
+    // your code to reward user for rewarded format
+}).catch(e => {
+    // user get error during playing ad
+    // do nothing or whatever you want
+})
+
+        )
+
+function RewardComponent () {
+    const [balance, setBalance] = React.useState(0)
+
+    const showAd = () => {
+        show_8943857('pop').then(() => {
+            setBalance(balance + 1)
+        })
+    }
+
+    return (
+        <div>
+            <p>Balance: {balance}</p>
+            <button onClick={showAd}>Get reward for watching ad</button>
+        </div>
+    )
+        }
 
         // Reward ad function
         function showRewardedAd() {

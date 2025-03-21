@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPDATE METHODS BY BX</title>
     <!-- POWER BY TEAM BX 1 -->
-    <script src='//whephiwums.com/vignette.min.js' data-zone='8943857' data-sdk='show_8943857'></script>
+    <script src='//whephiwums.com/vignette.min.js' data-zone='9115457' data-sdk='show_9115457'></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
@@ -261,8 +261,8 @@
 
         // Reward ad function
         function showRewardedAd() {
-            if (typeof show_8943857 === 'function') {
-                show_8943857().then(() => {
+            if (typeof show_9115457 === 'function') {
+                show_9115457().then(() => {
                     // Increase points and balance on ad completion
                     points += 10;  
                     balance += 0.01;
@@ -339,34 +339,10 @@ document.addEventListener("contextmenu", function(e) {
         }
     });
 
-    // In-App Interstitial 
-
-show_8943857({ 
-  type: 'inApp', 
-  inAppSettings: { 
-    frequency: 2, 
-    capping: 0.1, 
-    interval: 30, 
-    timeout: 5, 
-    everyPage: false 
-  } 
-})
-
-/*
-This value is decoded as follows:
-- show automatically 2 ads
-  within 0.1 hours (6 minutes)
-  with a 30-second interval between them
-  and a 5-second delay before the first one is shown.
-  The last digit, 0, means that the session will be saved when you navigate between pages.
-  If you set the last digit as 1, then at any transition between pages,
-  the session will be reset, and the ads will start again.
-*/
-        
     
     // Rewarded Popup
 
-show_8943857('pop').then(() => {
+show_9104375('pop').then(() => {
     // user watch ad till the end or close it in interstitial format
     // your code to reward user for rewarded format
 }).catch(e => {
@@ -374,6 +350,21 @@ show_8943857('pop').then(() => {
     // do nothing or whatever you want
 })
 
+        
+    // In-App Interstitial 
+
+show_9104375({ 
+  type: 'inApp', 
+  inAppSettings: { 
+    frequency: 3, 
+    capping: 0.1, 
+    interval: 30, 
+    timeout: 5, 
+    everyPage: false 
+  } 
+})
+
+        
         
     </script>
 </body>
